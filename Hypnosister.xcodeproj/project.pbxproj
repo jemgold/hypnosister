@@ -18,8 +18,9 @@
 		FCB8A1931662A05400BD4D74 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB8A1921662A05400BD4D74 /* Default-568h@2x.png */; };
 		FCB8A19B1662A0E400BD4D74 /* JGHypnosisView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB8A19A1662A0E400BD4D74 /* JGHypnosisView.m */; };
 		FCC812881664597400668CCE /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC812871664597400668CCE /* CoreMotion.framework */; };
-		FCC812B7166669BD00668CCE /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC812B6166669BD00668CCE /* Icon.png */; };
-		FCC812B9166669C300668CCE /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC812B8166669C300668CCE /* Icon@2x.png */; };
+		FCC812BB1666725B00668CCE /* screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC812BA1666725B00668CCE /* screenshot.png */; };
+		FCC812BE166677E100668CCE /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC812BC166677E100668CCE /* Icon.png */; };
+		FCC812BF166677E100668CCE /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC812BD166677E100668CCE /* Icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,8 +40,9 @@
 		FCB8A1991662A0E400BD4D74 /* JGHypnosisView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGHypnosisView.h; sourceTree = "<group>"; };
 		FCB8A19A1662A0E400BD4D74 /* JGHypnosisView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGHypnosisView.m; sourceTree = "<group>"; };
 		FCC812871664597400668CCE /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		FCC812B6166669BD00668CCE /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
-		FCC812B8166669C300668CCE /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
+		FCC812BA1666725B00668CCE /* screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot.png; sourceTree = "<group>"; };
+		FCC812BC166677E100668CCE /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		FCC812BD166677E100668CCE /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		FCB8A16D1662A05400BD4D74 = {
 			isa = PBXGroup;
 			children = (
+				FCC812BA1666725B00668CCE /* screenshot.png */,
 				FCB8A1821662A05400BD4D74 /* Hypnosister */,
 				FCB8A17B1662A05400BD4D74 /* Frameworks */,
 				FCB8A1791662A05400BD4D74 /* Products */,
@@ -101,8 +104,8 @@
 		FCB8A1831662A05400BD4D74 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FCC812B8166669C300668CCE /* Icon@2x.png */,
-				FCC812B6166669BD00668CCE /* Icon.png */,
+				FCC812BC166677E100668CCE /* Icon.png */,
+				FCC812BD166677E100668CCE /* Icon@2x.png */,
 				FCB8A1841662A05400BD4D74 /* Hypnosister-Info.plist */,
 				FCB8A1851662A05400BD4D74 /* InfoPlist.strings */,
 				FCB8A1881662A05400BD4D74 /* main.m */,
@@ -170,8 +173,9 @@
 				FCB8A18F1662A05400BD4D74 /* Default.png in Resources */,
 				FCB8A1911662A05400BD4D74 /* Default@2x.png in Resources */,
 				FCB8A1931662A05400BD4D74 /* Default-568h@2x.png in Resources */,
-				FCC812B7166669BD00668CCE /* Icon.png in Resources */,
-				FCC812B9166669C300668CCE /* Icon@2x.png in Resources */,
+				FCC812BB1666725B00668CCE /* screenshot.png in Resources */,
+				FCC812BE166677E100668CCE /* Icon.png in Resources */,
+				FCC812BF166677E100668CCE /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
