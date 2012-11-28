@@ -16,6 +16,10 @@
 		FCB8A18F1662A05400BD4D74 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB8A18E1662A05400BD4D74 /* Default.png */; };
 		FCB8A1911662A05400BD4D74 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB8A1901662A05400BD4D74 /* Default@2x.png */; };
 		FCB8A1931662A05400BD4D74 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB8A1921662A05400BD4D74 /* Default-568h@2x.png */; };
+		FCB8A19B1662A0E400BD4D74 /* JGHypnosisView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB8A19A1662A0E400BD4D74 /* JGHypnosisView.m */; };
+		FCC812881664597400668CCE /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC812871664597400668CCE /* CoreMotion.framework */; };
+		FCC812B7166669BD00668CCE /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC812B6166669BD00668CCE /* Icon.png */; };
+		FCC812B9166669C300668CCE /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCC812B8166669C300668CCE /* Icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,11 @@
 		FCB8A18E1662A05400BD4D74 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		FCB8A1901662A05400BD4D74 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		FCB8A1921662A05400BD4D74 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		FCB8A1991662A0E400BD4D74 /* JGHypnosisView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGHypnosisView.h; sourceTree = "<group>"; };
+		FCB8A19A1662A0E400BD4D74 /* JGHypnosisView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGHypnosisView.m; sourceTree = "<group>"; };
+		FCC812871664597400668CCE /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		FCC812B6166669BD00668CCE /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
+		FCC812B8166669C300668CCE /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCC812881664597400668CCE /* CoreMotion.framework in Frameworks */,
 				FCB8A17D1662A05400BD4D74 /* UIKit.framework in Frameworks */,
 				FCB8A17F1662A05400BD4D74 /* Foundation.framework in Frameworks */,
 				FCB8A1811662A05400BD4D74 /* CoreGraphics.framework in Frameworks */,
@@ -68,6 +78,7 @@
 		FCB8A17B1662A05400BD4D74 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FCC812871664597400668CCE /* CoreMotion.framework */,
 				FCB8A17C1662A05400BD4D74 /* UIKit.framework */,
 				FCB8A17E1662A05400BD4D74 /* Foundation.framework */,
 				FCB8A1801662A05400BD4D74 /* CoreGraphics.framework */,
@@ -81,6 +92,8 @@
 				FCB8A18B1662A05400BD4D74 /* JGAppDelegate.h */,
 				FCB8A18C1662A05400BD4D74 /* JGAppDelegate.m */,
 				FCB8A1831662A05400BD4D74 /* Supporting Files */,
+				FCB8A1991662A0E400BD4D74 /* JGHypnosisView.h */,
+				FCB8A19A1662A0E400BD4D74 /* JGHypnosisView.m */,
 			);
 			path = Hypnosister;
 			sourceTree = "<group>";
@@ -88,6 +101,8 @@
 		FCB8A1831662A05400BD4D74 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FCC812B8166669C300668CCE /* Icon@2x.png */,
+				FCC812B6166669BD00668CCE /* Icon.png */,
 				FCB8A1841662A05400BD4D74 /* Hypnosister-Info.plist */,
 				FCB8A1851662A05400BD4D74 /* InfoPlist.strings */,
 				FCB8A1881662A05400BD4D74 /* main.m */,
@@ -155,6 +170,8 @@
 				FCB8A18F1662A05400BD4D74 /* Default.png in Resources */,
 				FCB8A1911662A05400BD4D74 /* Default@2x.png in Resources */,
 				FCB8A1931662A05400BD4D74 /* Default-568h@2x.png in Resources */,
+				FCC812B7166669BD00668CCE /* Icon.png in Resources */,
+				FCC812B9166669C300668CCE /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +184,7 @@
 			files = (
 				FCB8A1891662A05400BD4D74 /* main.m in Sources */,
 				FCB8A18D1662A05400BD4D74 /* JGAppDelegate.m in Sources */,
+				FCB8A19B1662A0E400BD4D74 /* JGHypnosisView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +293,7 @@
 				FCB8A1981662A05400BD4D74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

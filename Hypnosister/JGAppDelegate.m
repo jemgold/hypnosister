@@ -7,14 +7,28 @@
 //
 
 #import "JGAppDelegate.h"
+#import "JGHypnosisView.h"
 
 @implementation JGAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
+
+    [[self window] setBackgroundColor:[UIColor whiteColor]];
+    
+    JGHypnosisView *view = [[JGHypnosisView alloc] initWithFrame:[[self window] bounds]];
+    [[self window] addSubview:view];
+    
+    BOOL success = [view becomeFirstResponder];
+    if (success) {
+        NSLog(@"%@ became first responder", view);
+    } else {
+        NSLog(@"Couldn't make %@ first responder", view);
+    }
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
