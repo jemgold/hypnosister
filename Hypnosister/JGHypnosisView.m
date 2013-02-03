@@ -77,13 +77,17 @@
     motionManager = [[CMMotionManager alloc] init];
     
     // framerate dies if I go to 30fps, need to diagnose.
-    motionManager.deviceMotionUpdateInterval = 1.0/10;
+    motionManager.deviceMotionUpdateInterval = 1.0/90;
     if (motionManager.isDeviceMotionAvailable) {
         
-        // Not really sure how this queue works, going to refactor
-        // when I've read more about it.
+        
+        // create a background queue
+        NSOperationQueue *background = [[NSOperationQueue alloc] init];
+        background.name = @"Background queue";
+        
+        // send the updates to background thread(s) via the background queue
         [motionManager
-         startDeviceMotionUpdatesToQueue:[NSOperationQueue currentQueue]
+         startDeviceMotionUpdatesToQueue:background
          withHandler:^(CMDeviceMotion *motion, NSError *error) {
              
              CMAttitude *currentAttitude = motion.attitude;
@@ -92,10 +96,15 @@
              float roll = 30 + MAX(-30, MIN(30, RadiansToDegrees(currentAttitude.roll)));
              float pitch = 15 + MAX(-15, MIN(15, RadiansToDegrees(currentAttitude.pitch)));
              
+             // just putting this in an array instead of using the awesome dd_invokeOnMainThread
+             // as per http://stackoverflow.com/questions/1460589/how-do-i-call-performselectoronmainthread-with-an-selector-that-takes-1-argum
              
-             [self setCircleColor:[self generateColorWithHue:roll/60 andBrightness:pitch/30 andAlpha:1.0]];
-             [self setBackgroundColor:[self generateColorWithHue:roll/60 andBrightness:pitch/30 andAlpha:0.8]];
-             [self setNeedsDisplay];
+             NSArray *params = @[[NSNumber numberWithFloat:roll],
+                                 [NSNumber numberWithFloat:pitch]];
+             
+             
+             [self performSelectorOnMainThread:@selector(doRadColourChangeWithParams:) withObject:params waitUntilDone:NO];
+             
              
          }];
     } else {
@@ -104,17 +113,17 @@
     
 }
 
-// This is unused. Should probably delete it, shouldn't I?
-//- (float)positionIn3D:(float)f
-//{
-//    float position = f;
-//    if (position < 0)
-//    {
-//        position = 360 + position;
-//    }
-//    
-//    return position;
-//}
+- (void)doRadColourChangeWithParams:(NSArray *)params {
+    
+    float roll = [[params objectAtIndex:0] floatValue];
+    float pitch = [[params objectAtIndex:1] floatValue];
+    
+    
+    [self setCircleColor:[self generateColorWithHue:roll/60 andBrightness:pitch/30 andAlpha:1.0]];
+    [self setBackgroundColor:[self generateColorWithHue:roll/60 andBrightness:pitch/30 andAlpha:0.8]];
+    [self setNeedsDisplay];
+    
+}
 
 #pragma mark - touchy stuff
 // so you can do stuff on the simulator with no gyro.
